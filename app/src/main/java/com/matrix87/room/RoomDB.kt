@@ -8,7 +8,7 @@ import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 
 
-@Database(entities = [Product::class], version = 1)
+@Database(entities = [Product::class], version = 2)
 abstract class RoomDB : RoomDatabase() {
 
     abstract fun userDao(): RoomDao
@@ -17,7 +17,7 @@ abstract class RoomDB : RoomDatabase() {
         private var INSTANCE: RoomDB? = null
         val migration1_2: Migration = object : Migration(1, 2) {
             override fun migrate(database: SupportSQLiteDatabase) {
-                database.execSQL("Alter Table customers Add Column phone Text Default ''")
+                database.execSQL("Drop  table  SalesProduct ")
             }
         }
 
@@ -28,7 +28,7 @@ abstract class RoomDB : RoomDatabase() {
                         context.applicationContext,
                         RoomDB::class.java, "myCustomer.db"
                     ).allowMainThreadQueries()
-//                        .addMigrations(migration1_2)
+                        .addMigrations(migration1_2)
                         .build()
                 }
             }

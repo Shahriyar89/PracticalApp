@@ -6,7 +6,7 @@ import androidx.room.*
 @Dao
 interface RoomDao {
     @Query("SELECT * FROM SalesProduct")
-    suspend fun getAll(): List<Product>
+    fun getAll(): List<Product>
 
     @Query("SELECT * FROM SalesProduct WHERE pId IN (:id)")
     fun loadAllByIds(id: IntArray): List<Product>

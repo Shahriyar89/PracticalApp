@@ -9,6 +9,7 @@ data class Product(
     @PrimaryKey @ColumnInfo(name = "pId") val id: Int,
     @ColumnInfo(name = "url") val image: String,
     @ColumnInfo(name = "pTitle") val title: String,
-    @ColumnInfo(name = "pSubtitle") val subtitle: String
+    @ColumnInfo(name = "pSubtitle") val subtitle: String,
+    @ColumnInfo(name = "detail") val detail: String?=null
 
 )
