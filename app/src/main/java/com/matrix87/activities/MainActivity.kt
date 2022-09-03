@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         val navGraph = navController.navInflater.inflate(R.navigation.nnav_graph)
         navController.setGraph(navGraph, intent.extras)
 
-        Log.e("Tag", "My tag")
+        Log.e("Tag", "My tag dfjkdlfjldkfj;sdlkfjsdlkf")
 
         val appBarConfiguration =
             AppBarConfiguration(setOf(
