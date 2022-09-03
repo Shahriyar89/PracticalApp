@@ -2,6 +2,7 @@ package com.matrix87.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -18,6 +19,11 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
         val navGraph = navController.navInflater.inflate(R.navigation.nnav_graph)
         navController.setGraph(navGraph, intent.extras)
+
+        Log.e("Tag", "My tag dfjkdlfjldkfj;")
+
+        kdkskljdljsk
+
 
         val appBarConfiguration =
             AppBarConfiguration(setOf(
