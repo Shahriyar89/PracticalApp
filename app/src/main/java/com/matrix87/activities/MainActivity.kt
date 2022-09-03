@@ -1,4 +1,4 @@
-package com.matrix87.practicalapp
+package com.matrix87.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,6 +6,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.matrix87.practicalapp.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -19,7 +20,12 @@ class MainActivity : AppCompatActivity() {
         navController.setGraph(navGraph, intent.extras)
 
         val appBarConfiguration =
-            AppBarConfiguration(setOf(R.id.homeFragment, R.id.addFragment2, R.id.searchFragment,R.id.settingFragment))
+            AppBarConfiguration(setOf(
+                R.id.homeFragment,
+                R.id.addFragment2,
+                R.id.searchFragment,
+                R.id.settingFragment
+            ))
         setupActionBarWithNavController(navController, appBarConfiguration)
 //        bottomView.setOnItemSelectedListener { item ->
 //            when (item.itemId) {
